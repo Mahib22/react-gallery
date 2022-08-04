@@ -8,17 +8,20 @@ Membuat Website berisi foto dengan React yang diambil menggunakan API [Pixabay A
 
 - Menampilkan foto
 - Mencari foto
+- Dark mode
 
 ## Cara Install
 
 Buka terminal/CMD. Pastikan berada pada direktori tempat menyimpan project.
 
-### `git clone https://github.com/Mahib22/react-notes-app.git`
+```bash
+git clone https://github.com/Mahib22/react-notes-app.git
 
-### `cd react-notes-app`
+cd react-notes-app
 
-### `npm install`
+npm install
 
-### `npm start`
+npm start
+```
 
 Buka [http://localhost:3000](http://localhost:3000) untuk melihat pada browser.

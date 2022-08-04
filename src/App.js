@@ -25,25 +25,27 @@ function App() {
     <>
       <Header />
 
-      <div className="container px-5 py-4 mx-auto">
-        <ImageSearch searchText={(text) => setTerm(text)} />
-        {!isLoading && images.length === 0 && (
-          <h1 className="text-5xl font-bold text-center mx-auto mt-18">
-            No Images Found
-          </h1>
-        )}
+      <div className="dark:bg-slate-800 transition duration-200 min-h-screen">
+        <div className="container px-5 py-4 mx-auto">
+          <ImageSearch searchText={(text) => setTerm(text)} />
+          {!isLoading && images.length === 0 && (
+            <h1 className="text-5xl font-bold text-center mx-auto mt-18 dark:text-white">
+              No Images Found
+            </h1>
+          )}
 
-        {isLoading ? (
-          <h1 className="text-5xl font-bold text-center mx-auto mt-18">
-            Loading...
-          </h1>
-        ) : (
-          <div className="flex flex-wrap -m-4">
-            {images.map((image) => (
-              <ImageCard key={image.id} image={image} />
-            ))}
-          </div>
-        )}
+          {isLoading ? (
+            <h1 className="text-5xl font-bold text-center mx-auto mt-18 dark:text-white">
+              Loading...
+            </h1>
+          ) : (
+            <div className="flex flex-wrap -m-4 mb-4">
+              {images.map((image) => (
+                <ImageCard key={image.id} image={image} />
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </>
   );

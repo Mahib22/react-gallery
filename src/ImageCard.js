@@ -11,7 +11,7 @@ function ImageCard({ image }) {
           src={image.webformatURL}
           alt={`img-${image.id}`}
         />
-        <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 rounded-lg">
+        <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white dark:bg-gray-200 opacity-0 hover:opacity-100 rounded-lg">
           <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
             Photo by {image.user}
           </h1>
@@ -32,7 +32,7 @@ function ImageCard({ image }) {
           {tags.map((tag, index) => (
             <span
               key={index}
-              className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+              className="inline-block bg-gray-200 dark:bg-white rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
             >
               #{tag}
             </span>
